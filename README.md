@@ -19,4 +19,6 @@
 conda env create -f environment.yml
 ```
 
+
+
 Для запуска видео, в параметр --cameraId передайте путь к файлу.
