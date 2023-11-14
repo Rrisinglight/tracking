@@ -39,8 +39,7 @@ def run(model: str, max_results: int, score_threshold: float,
     """
 
     # Запуск захвата видеосигнала с камеры
-    cap = cv2.VideoCapture(
-        '/home/rasp/Desktop/mediapipe/examples/object_detection/raspberry_pi/Final.mp4')
+    cap = cv2.VideoCapture(camera_id)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
 

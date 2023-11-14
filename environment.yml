@@ -1,4 +1,4 @@
-name: myenv
+name: detect-env
 channels:
   - conda-forge
 dependencies:
