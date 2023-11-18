@@ -100,7 +100,6 @@ def run(model: str, max_results: int, score_threshold: float,
                     font_size, text_color, font_thickness, cv2.LINE_AA)
 
         if detection_result_list:
-            print(detection_result_list[0])
             current_frame = visualize(current_frame, detection_result_list[0])
             detection_result_list.clear()
 
@@ -127,7 +126,7 @@ if __name__ == '__main__':
         '--model',
         help='Путь к модели обнаружения объектов.',
         required=False,
-        default='/home/rasp/Desktop/mediapipe/examples/object_detection/raspberry_pi/balloons.tflite')
+        default='/balloons2.tflite')
     parser.add_argument(
         '--maxResults',
         help='Максимальное количество результатов обнаружения.',
@@ -138,7 +137,7 @@ if __name__ == '__main__':
         help='Порог оценки результатов обнаружения.',
         required=False,
         type=float,
-        default=0.15)
+        default=0.25)
     parser.add_argument(
         '--cameraId', help='Идентификатор камеры.', required=False, type=int, default=0)
     parser.add_argument(

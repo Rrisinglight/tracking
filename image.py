@@ -5,7 +5,7 @@ from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
 # Путь к изображению
-IMAGE_FILE = '/home/rasp/Desktop/mediapipe/examples/object_detection/raspberry_pi/image.jpg'
+IMAGE_FILE = '/image.jpg'
 
 # Загрузка изображения
 img = cv2.imread(IMAGE_FILE)
@@ -45,7 +45,7 @@ def visualize(image, detection_result) -> np.ndarray:
     return image
 
 # Создание объекта ObjectDetector
-base_options = python.BaseOptions(model_asset_path="mediapipe/examples/object_detection/raspberry_pi/balloons.tflite")
+base_options = python.BaseOptions(model_asset_path="/balloons2.tflite")
 options = vision.ObjectDetectorOptions(base_options=base_options,
                                        running_mode=vision.RunningMode.IMAGE,
                                        max_results=2, score_threshold=0.5,
